@@ -1,4 +1,0 @@
-cat.png
-dog.png
-mspaint.mp4
-roux.html
