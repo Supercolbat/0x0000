@@ -5,9 +5,10 @@ from os.path import isfile, join
 app = Flask('app')
 
 @app.route('/')
+@app.route('/index')
+@app.route('/index.html')
 def index():
-    return "<h1>0x0000 file hosting</h1>"
-    # return '<br>'.join([f for f in listdir('files') if isfile(join('files', f))])
+    return render_template("index.html")
 
 @app.route('/<file>')
 def returnfile(file):
