@@ -1,16 +1,22 @@
-@font-face { font-family: TTWP; src: url('/static/fonts/TruetypewriterPolyglott.ttf'); }
+footer {
+    padding: 0.5%;
+    padding-left: 1%;
 
-html, body {margin: 0;}
-
-body {
-    font-family: monospace;
+    bottom: 0;
 }
 
 .header {
     background-image: url("/static/assets/background.png");
-    padding: 5%;
 
     font-family: TTWP;
     color: #ffffff;
+    text-align: center;
+}
+
+.row {
+    padding: 2%;
+}
+
+.col {
     text-align: center;
 }
