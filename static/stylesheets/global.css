@@ -1,4 +1,4 @@
-@font-face { font-family: TTWP; src: url('/static/fonts/TruetypewriterPolyglott.ttf'); }
+@font-face { font-family: TTWP; src: url("/static/fonts/TruetypewriterPolyglott.ttf"); }
 
 html, body {
     margin: 0;
@@ -8,4 +8,19 @@ html, body {
 
 body {
     font-family: monospace;
+}
+
+.header {
+    background-image: url("/static/assets/background.png");
+
+    font-family: TTWP;
+    color: #ffffff;
+    text-align: center;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

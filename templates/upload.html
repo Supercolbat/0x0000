@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <title>0x0000 file hosting</title>
+        <title>0x0000 file upload</title>
         <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/favicon.png') }}">
 
         <meta charset="utf-8">
@@ -22,24 +22,24 @@
     <body>
         <a class="github-fork-ribbon right-top" href="hhttps://github.com/Supercolbat/0x0000" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
         <div class="jumbotron rounded-0 header">
-            <h1>0x0000 file hosting</h1>
+            <h1>upload files</h1>
             <br>
             <h2>WIP</h2>
         </div>
         <div class="row">
             <div class="col">
-                <h3>Easy file hosting</h3>        
-                <p>Host your files online without the hassle. Maximum of <b>10mb</b> upload size. Files stay up for <b>2 months</b>.</p>
-                <p>well not yet because you can't upload files yet...</p>
+                <h3>Upload file</h3>
+                <form method="POST" enctype="multipart/form-data">
+                    <input type="file" name="file">
+                    <br><br>
+                    <button type="submit" class="btn btn-primary btn-sm">Upload file</button>
+                </form>
             </div>
             <div class="col">
-                <h3>Hosted on repl.it</h3>        
-                <p>A free, collaborative, in-browser IDE that supports over 50 languages.</p>
-                <p>Special thanks to repl.it :D</p>
+                <h3>Information</h3>        
+                <p>You can only upload a maximum of <b>10mb</b> at a time</p>
+                <p>Files only stay up for <b>2 months</b> then get deleted.</p>
             </div>
-        </div>
-        <div class="text-center">
-            <a href="https://www.0x0000.gq/upload" role="button" class="btn btn-primary btn-lg">Upload!</a>
         </div>
         <footer>
             <a href="https://repl.it/@JoeyLent">@JoeyLent</a> on repl.it  |  <a href="https://github.com/Supercolbat">Supercolbat</a> on github</a>

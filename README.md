@@ -1,3 +1,3 @@
 # 0x0000
-A file hosting site.
+A file uploading site hosted on repl.it.
 More info coming soon
