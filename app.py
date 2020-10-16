@@ -1,5 +1,6 @@
 from flask import Flask, render_template, send_from_directory
-from app import app
+
+app = Flask("app")
 
 @app.route('/')
 @app.route('/index')
@@ -12,6 +13,6 @@ def returnfile(file):
     try:
         return send_from_directory('files', file)
     except:
-        return f"File '{file}'not found"
+        return f"File '{file}' not found"
 
 app.run(host='0.0.0.0', port=8080)
