@@ -1,5 +1,13 @@
 [[package]]
 category = "main"
+description = "a simple egg"
+name = "app"
+optional = false
+python-versions = "*"
+version = "0.0.1"
+
+[[package]]
+category = "main"
 description = "Composable command line interface toolkit"
 name = "click"
 optional = false
@@ -24,6 +32,17 @@ itsdangerous = ">=0.24"
 dev = ["pytest", "coverage", "tox", "sphinx", "pallets-sphinx-themes", "sphinxcontrib-log-cabinet", "sphinx-issues"]
 docs = ["sphinx", "pallets-sphinx-themes", "sphinxcontrib-log-cabinet", "sphinx-issues"]
 dotenv = ["python-dotenv"]
+
+[[package]]
+category = "main"
+description = "Freezes a Flask application into a set of static files."
+name = "frozen-flask"
+optional = false
+python-versions = "*"
+version = "0.15"
+
+[package.dependencies]
+Flask = ">=0.7"
 
 [[package]]
 category = "main"
@@ -68,10 +87,14 @@ dev = ["pytest", "pytest-timeout", "coverage", "tox", "sphinx", "pallets-sphinx-
 watchdog = ["watchdog"]
 
 [metadata]
-content-hash = "3c37ad5f1b4ae7c80c3391b834fe25fa9ff1d5ded7b574e674038f7f100e7783"
+content-hash = "3884bfb5c3d1e6841d31963da715cc2cb9f8ca2af1a5a7bbb9404dfdf8b7295b"
 python-versions = "^3.8"
 
 [metadata.files]
+app = [
+    {file = "app-0.0.1-py2.7.egg", hash = "sha256:88e1df5e4ef0a02e2bf43b7a97a278c074c4d27ecd32684aa1d46d7414ed597c"},
+    {file = "app-0.0.1.zip", hash = "sha256:214549e746d777292d807eec7713c2cea332e08e037c923cd61ee1d5ab7a127f"},
+]
 click = [
     {file = "click-7.1.2-py2.py3-none-any.whl", hash = "sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"},
     {file = "click-7.1.2.tar.gz", hash = "sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"},
@@ -79,6 +102,10 @@ click = [
 flask = [
     {file = "Flask-1.1.2-py2.py3-none-any.whl", hash = "sha256:8a4fdd8936eba2512e9c85df320a37e694c93945b33ef33c89946a340a238557"},
     {file = "Flask-1.1.2.tar.gz", hash = "sha256:4efa1ae2d7c9865af48986de8aeb8504bf32c7f3d6fdc9353d34b21f4b127060"},
+]
+frozen-flask = [
+    {file = "Frozen-Flask-0.15.tar.gz", hash = "sha256:83858d6ed8b9d3fa7fc9523e415e65fb86b99352798d7695f63cffbd59a56269"},
+    {file = "Frozen_Flask-0.15-py2.py3-none-any.whl", hash = "sha256:0a7a71334210ce84f8cbd1dc23c8b265d3e21748805c09c77d0e6fbcc4faab14"},
 ]
 itsdangerous = [
     {file = "itsdangerous-1.1.0-py2.py3-none-any.whl", hash = "sha256:b12271b2047cb23eeb98c8b5622e2e5c5e9abd9784a153e9d8ef9cb4dd09d749"},

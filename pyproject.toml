@@ -7,6 +7,8 @@ authors = ["Your Name <you@example.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 flask = "^1.1.2"
+app = "^0.0.1"
+Frozen-Flask = "^0.15"
 
 [tool.poetry.dev-dependencies]
 
