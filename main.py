@@ -1,6 +1,4 @@
-from flask import Flask, render_template, request, send_from_directory
-from os import listdir
-from os.path import isfile, join
+from flask import Flask, render_template, send_from_directory
 
 app = Flask('app')
 
