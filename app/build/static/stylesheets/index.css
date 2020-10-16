@@ -1,0 +1,22 @@
+footer {
+    padding: 0.5%;
+    padding-left: 1%;
+
+    bottom: 0;
+}
+
+.header {
+    background-image: url("/static/assets/background.png");
+
+    font-family: TTWP;
+    color: #ffffff;
+    text-align: center;
+}
+
+.row {
+    padding: 2%;
+}
+
+.col {
+    text-align: center;
+}
