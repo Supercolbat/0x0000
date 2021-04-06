@@ -1,0 +1,22 @@
+@font-face { font-family: TTWP; src: url("/static/fonts/TruetypewriterPolyglott.ttf"); }
+
+html, body {
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    background-image: url("/static/assets/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    color: #ffffff;
+    text-align: center;
+
+    font-family: TTWP;
+}
+
+h1 {
+    line-height: 100vh;
+}

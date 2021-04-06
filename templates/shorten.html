@@ -12,7 +12,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src ="{{ url_for('static', filename='scripts/uploader.js') }}"></script>
+        <script src ="{{ url_for('static', filename='scripts/urlshorten.js') }}"></script>
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
@@ -29,17 +29,14 @@
         <div class="row">
             <div class="col">
                 <form method="POST" enctype="multipart/form-data">
-                    <input id="file" type="file" name="file">
+                    <input id="url" type="text" name="url" placeholder="https://example.com/path" autocomplete="off">
                     <br><br>
-                    <button id="submit" type="button" class="btn btn-primary btn-sm">Upload</button>
+                    <button id="submit" type="button" class="btn btn-primary btn-sm">Shorten</button>
                 </form>
-                <progress></progress>
             </div>
             <div class="col">
                 <h3>Information</h3>        
-                <p>You can only upload a maximum of <b>10mb</b> at a time</p>
-                <!--<p>Files only stay up for <b>2 months</b> then get deleted.</p>-->
-                <p>Absolute privacy from my part is ensured.</p>
+                <p>Shortened URL's last forever!</p>
             </div>
         </div>
         <footer>
@@ -48,17 +45,32 @@
     </body>
 
     <!-- Modal -->
-    <div id="filetoolarge-modal" class="modal" tabindex="-1" role="dialog">
+    <div id="alreadyshortened-modal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">File too large</h5>
+                    <h5 class="modal-title">URL already shortened</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>The file can't be larger than 10 megabytes.</p>
+                    <p>...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="notfound-modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">URL couldn't be accessed</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Please check that the URL is written correctly or the website is up.</p>
                 </div>
             </div>
         </div>
